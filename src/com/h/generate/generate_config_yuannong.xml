@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="H:\BaiduYunDownload\MybatisGenerator\lib\mysql-connector-java-5.1.28-bin.jar" />
+	<context id="DB2Tables" targetRuntime="MyBatis3">
+		<plugin type="com.h.generate.MyPlusForMySql" />
+
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Example" />
+		</plugin>
+
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://127.0.0.1:3306/charisma"
+			userId="root"
+			password="root">
+		</jdbcConnection>
+
+		<javaTypeResolver >
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<javaModelGenerator targetPackage="com.w3cmart.entity" targetProject="src">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="com.w3cmart.mapper"  targetProject="src">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.w3cmart.mapper"  targetProject="src">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+		<table tableName="user" domainObjectName="User">
+			<columnOverride column="status" javaType="com.w3cmart.common.enums.StatusEnum" typeHandler="com.w3cmart.common.enums.StatusEnum"></columnOverride>
+		</table>
+	<!-- 	<table tableName="t_inventory_threshold" domainObjectName="InventoryThreshold" ></table><columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride> -->
+<!-- 		 <table domainObjectName="WarehouseProductLine" tableName="t_warehouse_product_line" ></table> -->
+<!--  		<table tableName="t_inventory_info" domainObjectName="InventoryInfo" ></table>
+
+		<table tableName="t_inventory_flow_in" domainObjectName="InventoryFlowIn">
+			<columnOverride column="flow_type" javaType="com.zhiqu.common.enums.InventoryFlowInEnum" typeHandler="com.zhiqu.common.enums.InventoryFlowInEnumHandler"></columnOverride>
+		</table>
+
+		<table tableName="t_inventory_flow_in_detail" domainObjectName="InventoryFlowInDetail" ></table>
+
+		<table tableName="t_inventory_flow_out" domainObjectName="InventoryFlowOut">
+			<columnOverride column="flow_type" javaType="com.zhiqu.common.enums.InventoryFlowOutEnum" typeHandler="com.zhiqu.common.enums.InventoryFlowOutEnumHandler"></columnOverride>
+		</table>
+		
+		<table tableName="t_inventory_flow_out_detail" domainObjectName="InventoryFlowOutDetail" ></table>  -->
+		
+	
+<!-- 	    <table domainObjectName="GoodsOrderStatistics" tableName="t_goods_order_statistics" ></table>
+	    <table domainObjectName="CustomerStockout" tableName="t_customer_stockout" ></table> -->
+	    
+	    <!--
+	    <table domainObjectName="RuleProccer" tableName="t_rule_proccer" >
+	    </table>
+	    
+		<table domainObjectName="TaskRunInfo" tableName="t_task_run_info" ></table>
+	    
+	    <table domainObjectName="SystemParamConf" tableName="t_system_param_conf" ></table>
+	    
+	    <table domainObjectName="SystemParamConfHistory" tableName="t_system_param_conf_history" >
+	    </table>
+	    
+	    <table domainObjectName="ProvinceDict" tableName="t_province_dict" >
+	    </table>
+	    
+	    <table domainObjectName="ChargeUnit" tableName="t_charge_unit" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="CityDict" tableName="t_city_dict" >
+	    </table>
+	    
+	    <table domainObjectName="CountyDict" tableName="t_county_dict" >
+	    </table>
+	    
+	    <table domainObjectName="TownDict" tableName="t_town_dict" >
+	    </table>
+	    
+	    <table domainObjectName="WordStock" tableName="t_word_stock" >
+	    </table>
+	    
+	    <table domainObjectName="DimensionProduct" tableName="t_dimension_product" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="ProductDimenValue" tableName="t_product_dimen_value" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="ProductLine" tableName="t_product_line" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="ProductType" tableName="t_product_type" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="Product" tableName="t_product" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="GoodsInfo" tableName="t_goods_info" >
+	    </table>
+	    
+	    <table domainObjectName="GoodsDimenValue" tableName="t_goods_dimen_value" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="GoodsPriceInfo" tableName="t_goods_price_info" >
+	    </table>
+	    
+	    <table domainObjectName="GoodsSaleArea" tableName="t_goods_sale_area" >
+	    </table>
+	    
+	    <table domainObjectName="CustomerType" tableName="t_customer_type" >
+	    </table>
+	    
+	    <table domainObjectName="CustomerLevel" tableName="t_customer_level" >
+	    </table>
+	    
+	    <table domainObjectName="Customer" tableName="t_customer" >
+	    </table>
+	    
+	    <table domainObjectName="CustomerHistory" tableName="t_customer_history" >
+	    </table>
+	    
+	    <table domainObjectName="ContractInfo" tableName="t_contract_info" >
+	    </table>
+	    
+	    <table domainObjectName="OrderDetail" tableName="t_order_detail" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="Order" tableName="t_order" >
+	    </table>
+	    
+	    <table domainObjectName="OrderAssistInfo" tableName="t_order_assist_info" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="ShoppingCart" tableName="t_shopping_cart" >
+	    	<columnOverride column="goods_status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="HomeMarquee" tableName="t_home_marquee" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="HomeRecommend" tableName="t_home_recommend" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="HomeClass" tableName="t_home_class" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="ProviderType" tableName="t_provider_type" >
+	    </table>
+	    <table domainObjectName="ProviderLevel" tableName="t_provider_level" >
+	    </table>
+	    <table domainObjectName="Provider" tableName="t_provider" >
+	    </table>
+	    <table domainObjectName="ProviderDetail" tableName="t_provider_detail" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="PurchaseOrder" tableName="t_purchase_order" >
+	    </table>
+	    
+	    <table domainObjectName="PurchaseOrderDetail" tableName="t_purchase_order_detail" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="AccountInfo" tableName="t_account_info" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="AccountDealDetail" tableName="t_account_deal_detail" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="Warehouse" tableName="t_warehouse" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="WarehouseProductLine" tableName="t_warehouse_product_line" >
+	    </table>
+	    
+	    <table domainObjectName="WarehouseCar" tableName="t_warehouse_car" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="Car" tableName="t_car" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="Driver" tableName="t_driver" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    
+	    <table domainObjectName="ExpressLine" tableName="t_express_line" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    <table domainObjectName="ExpressLineCustomer" tableName="t_express_line_customer" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	     -->
+	     
+	     <!-- 
+	     <table domainObjectName="PromotionFristClass" tableName="t_promotion_frist_class" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    <table domainObjectName="PromotionSecondClass" tableName="t_promotion_second_class" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+	    <table domainObjectName="GoodsSalesPromotion" tableName="t_goods_sales_promotion" >
+	    	<columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride>
+	    </table>
+
+	    <table domainObjectName="GoodsOrderStatistics" tableName="t_goods_order_statistics" ></table>
+	    <table domainObjectName="CustomerOrderStatistics" tableName="t_customer_order_statistics" ></table>
+	    <table domainObjectName="CustomerStockout" tableName="t_customer_stockout" ></table>
+	      -->
+
+	</context>
+
+</generatorConfiguration>
+
