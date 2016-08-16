@@ -2,7 +2,7 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-	<classPathEntry location="H:\BaiduYunDownload\MybatisGenerator\lib\mysql-connector-java-5.1.28-bin.jar" />
+	<classPathEntry location="G:\MybatisGenerator\lib\mysql-connector-java-5.1.28-bin.jar" />
 	<context id="DB2Tables" targetRuntime="MyBatis3">
 		<plugin type="com.h.generate.MyPlusForMySql" />
 
@@ -38,7 +38,7 @@
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		<table tableName="user" domainObjectName="User">
-			<columnOverride column="status" javaType="com.w3cmart.common.enums.StatusEnum" typeHandler="com.w3cmart.common.enums.StatusEnum"></columnOverride>
+			<!--<columnOverride column="status" javaType="com.w3cmart.common.enums.StatusEnum" typeHandler="com.w3cmart.common.enums.StatusEnum"></columnOverride>-->
 		</table>
 	<!-- 	<table tableName="t_inventory_threshold" domainObjectName="InventoryThreshold" ></table><columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride> -->
 <!-- 		 <table domainObjectName="WarehouseProductLine" tableName="t_warehouse_product_line" ></table> -->
