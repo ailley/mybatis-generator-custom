@@ -21,8 +21,7 @@ public class GenerateCode {
 	 * @throws Exception
 	 */
 	public void generateMain() throws Exception {
-//		String f2 = GenerateCode.class.getResource("generate_config_passport.xml").getPath();
-		String f2 = GenerateCode.class.getResource("generate_config_yuannong.xml").getPath();
+		String f2 = GenerateCode.class.getResource("generate_config_charisma.xml").getPath();
 		generate(f2);
 	}
 
