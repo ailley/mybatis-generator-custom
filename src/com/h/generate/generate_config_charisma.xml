@@ -8,7 +8,7 @@
 
 		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
 			<property name="searchString" value="Example$" />
-			<property name="replaceString" value="Example" />
+			<property name="replaceString" value="Criteria" />
 		</plugin>
 
 		<commentGenerator>
