@@ -8,7 +8,7 @@
 
 		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
 			<property name="searchString" value="Example$" />
-			<property name="replaceString" value="Example" />
+			<property name="replaceString" value="Criteria" />
 		</plugin>
 
 		<commentGenerator>
@@ -37,7 +37,7 @@
 		<javaClientGenerator type="XMLMAPPER" targetPackage="com.w3cmart.mapper"  targetProject="src">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
-		<table tableName="user_info" domainObjectName="UserInfo">
+		<table tableName="user" domainObjectName="User">
 			<columnOverride column="status" javaType="com.w3cmart.common.enums.StatusEnum" typeHandler="com.w3cmart.common.enums.StatusEnumHandler"></columnOverride>
 		</table>
 	<!-- 	<table tableName="t_inventory_threshold" domainObjectName="InventoryThreshold" ></table><columnOverride column="status" javaType="com.h.common.enums.EnableEnum" typeHandler="com.h.common.enums.EnableEnumHandler"></columnOverride> -->
